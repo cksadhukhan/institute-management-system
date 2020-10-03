@@ -1,0 +1,37 @@
+#include <stdio.h>
+// arrow function
+int arrow(int num) {
+   int i, j;
+   // Prints the upper part of the arrow
+   for (i = 1; i <= num; i++) {
+      // to print the spaces
+      for (j = i; j < num; j++) {
+         printf(" ");
+      }
+      // to print the * for the pattern
+      for (j = i; j <= num; j++) {
+         printf("*");
+      }
+      printf("\n");
+   }
+   // Prints lower part of the arrow
+   for (i = 2; i <= num; i++) {
+      // to print the spaces
+      for (j = 1; j < i; j++) {
+         printf(" ");
+      }
+      // to print the * for the pattern
+      for (j = 1; j <= i; j++) {
+         printf("*");
+      }
+      printf("\n");
+   }
+   return 0;
+}
+int main() {
+   // get the value from user
+   int num = 4;
+   // function calling
+   arrow(num);
+   return 0;
+}
